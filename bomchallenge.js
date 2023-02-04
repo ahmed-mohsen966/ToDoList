@@ -5,10 +5,10 @@ text = this.document.querySelector(".input");
 let tasks =[];
 //console.log(tasks.length);
 
-if(this.window.localStorage.getItem('tasks')){
-    console.log("exist");
-    tasks = tasks.concat(JSON.parse(window.localStorage.tasks));
-
+// if(this.window.localStorage.getItem('tasks')){
+//     console.log("exist");
+//     tasks = tasks.concat(JSON.parse(window.localStorage.tasks));
+// }
 
 text.addEventListener('blur',function(){
     if(!isValidText(text.value))
@@ -24,7 +24,7 @@ this.document.querySelector(".add").addEventListener("click",function(){
         addRow(text);
     }
 })
-}
+
 function isValidText(value){
     return value.match(/^[a-zA-z]/)
 }
